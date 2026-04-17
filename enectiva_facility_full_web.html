@@ -1,0 +1,335 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--teal:#1D9E8A;--tlm:#5DCAA5;--tl:#E8F7F4;--lime:#8DC63F;--ll:#EEF7DC;--dark:#0F1F2E;--navy:#141F2E;--card:#1E2E3E;--gray:#6B7280;--border:#E5E7EB;--bg:#F9FAFB;}
+body{font-family:system-ui,-apple-system,sans-serif;background:#fff;}
+
+/* NAV */
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;border-bottom:1px solid var(--border);position:sticky;top:0;background:#fff;z-index:100;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo-icon{display:flex;align-items:flex-end;gap:3px;height:26px;}
+.lb{width:5px;border-radius:2px;background:var(--teal);}
+.lb1{height:16px;}.lb2{height:22px;}.lb3{height:12px;}
+.ld{width:7px;height:7px;background:var(--lime);transform:rotate(45deg);margin-left:3px;margin-bottom:3px;}
+.logo-text{font-size:15px;font-weight:700;color:var(--dark);}
+.logo-text span{color:var(--teal);}
+.nav-links{display:flex;gap:28px;}
+.nav-link{font-size:14px;color:var(--gray);font-weight:500;}
+.nav-cta{background:var(--teal);color:#fff;font-size:14px;font-weight:600;padding:9px 20px;border-radius:8px;}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:72px 48px 56px;}
+.h-eye{font-size:12px;color:var(--teal);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px;}
+.h-title{font-size:38px;font-weight:700;color:var(--dark);line-height:1.2;margin-bottom:16px;}
+.h-sub{font-size:16px;color:var(--gray);line-height:1.65;margin-bottom:36px;max-width:440px;}
+.ctas{display:flex;gap:12px;align-items:center;}
+.btn-p{background:var(--teal);color:#fff;font-size:14px;font-weight:600;padding:12px 24px;border-radius:8px;}
+.btn-s{border:1.5px solid var(--border);color:var(--dark);font-size:14px;font-weight:600;padding:11px 22px;border-radius:8px;}
+.mockup{background:var(--tl);border-radius:20px;padding:24px;border:1px solid rgba(29,158,138,.15);}
+.mock-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.mock-title{font-size:13px;font-weight:600;color:var(--dark);}
+.mock-badge{background:var(--teal);color:#fff;font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px;}
+.mock-rows{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.mock-row{display:flex;align-items:center;gap:10px;}
+.mock-rl{font-size:11px;color:var(--gray);min-width:80px;}
+.mock-bw{flex:1;background:rgba(29,158,138,.15);border-radius:4px;height:8px;overflow:hidden;}
+.mock-bar{height:100%;border-radius:4px;background:var(--tlm);}
+.mock-val{font-size:11px;font-weight:600;color:#0F6E5A;min-width:52px;text-align:right;}
+.mock-chips{display:flex;gap:8px;}
+.mock-chip{flex:1;background:#fff;border-radius:8px;padding:8px;text-align:center;font-size:12px;font-weight:600;color:var(--dark);border:1px solid var(--border);}
+
+/* TRUST STRIP */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);}
+.trust-item{padding:20px 48px;border-right:1px solid var(--border);}
+.trust-item:last-child{border-right:none;}
+.trust-n{font-size:22px;font-weight:700;color:var(--teal);}
+.trust-l{font-size:12px;color:var(--gray);margin-top:2px;}
+
+/* REALITA */
+.realita{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:72px 48px;}
+.r-eye{font-size:12px;color:var(--teal);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:14px;}
+.r-title{font-size:30px;font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:28px;}
+.items{display:flex;flex-direction:column;gap:20px;}
+.item-r{display:flex;gap:14px;align-items:flex-start;}
+.iw{width:36px;height:36px;border-radius:9px;background:var(--tl);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.it{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:3px;}
+.is{font-size:13px;color:var(--gray);line-height:1.6;}
+.visual{position:relative;height:360px;}
+@keyframes f1{0%,100%{transform:translateY(0) rotate(-2deg);}50%{transform:translateY(-10px) rotate(-2deg);}}
+@keyframes f2{0%,100%{transform:translateY(0) rotate(1.5deg);}50%{transform:translateY(-13px) rotate(1.5deg);}}
+@keyframes f3{0%,100%{transform:translateY(0) rotate(-1deg);}50%{transform:translateY(-9px) rotate(-1deg);}}
+@keyframes f4{0%,100%{transform:translateY(0) rotate(2deg);}50%{transform:translateY(-11px) rotate(2deg);}}
+@keyframes f5{0%,100%{transform:translateY(0) rotate(-1.5deg);}50%{transform:translateY(-8px) rotate(-1.5deg);}}
+.ic{position:absolute;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;align-items:center;gap:7px;box-shadow:0 4px 20px rgba(0,0,0,.07);min-width:92px;}
+.ic-iw{width:40px;height:40px;border-radius:10px;background:var(--tl);display:flex;align-items:center;justify-content:center;}
+.ic-l{font-size:11px;font-weight:700;color:var(--dark);}
+.c1{top:16px;left:10%;animation:f1 4s ease-in-out infinite;}
+.c2{top:8px;left:52%;animation:f2 5s ease-in-out infinite .5s;}
+.c3{top:50%;left:2%;transform:translateY(-50%);animation:f3 4.5s ease-in-out infinite 1s;}
+.c4{bottom:24px;left:14%;animation:f4 5.5s ease-in-out infinite .3s;}
+.c5{bottom:20px;right:8%;animation:f5 4.8s ease-in-out infinite .8s;}
+.cdot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:var(--teal);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:10;box-shadow:0 8px 28px rgba(29,158,138,.28);}
+.svgl{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
+
+/* STAV PO */
+.stavpo{background:var(--navy);padding:72px 48px;}
+.sp-eye{font-size:12px;color:var(--tlm);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;}
+.sp-title{font-size:32px;font-weight:700;color:#fff;line-height:1.2;margin-bottom:40px;}
+.sp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.sp-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px;}
+.sp-icon{width:40px;height:40px;border-radius:10px;background:rgba(29,158,138,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.sp-t{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px;}
+.sp-sub{font-size:12px;font-weight:600;color:var(--tlm);margin-bottom:10px;}
+.sp-s{font-size:13px;color:rgba(255,255,255,.45);line-height:1.65;}
+
+/* JAK FUNGUJE */
+.jakfunguje{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:72px 48px;}
+.jf-eye{font-size:12px;color:var(--teal);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;}
+.jf-title{font-size:28px;font-weight:700;color:var(--dark);line-height:1.25;margin-bottom:32px;}
+.jf-steps{display:flex;flex-direction:column;gap:28px;}
+.jf-step{display:flex;gap:18px;align-items:flex-start;}
+.jf-num{width:34px;height:34px;border-radius:8px;background:var(--tl);border:1.5px solid var(--teal);color:var(--teal);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.jf-t{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:6px;line-height:1.3;}
+.jf-s{font-size:14px;color:var(--gray);line-height:1.65;}
+.jf-mock{background:var(--bg);border-radius:20px;min-height:300px;display:flex;align-items:center;justify-content:center;border:1.5px dashed var(--border);}
+.jf-mock span{font-size:13px;color:#C0C4CC;font-weight:500;}
+
+/* ZÁKON BANNER */
+.zakon{background:var(--dark);padding:28px 48px;display:flex;align-items:center;gap:20px;}
+.z-icon{width:48px;height:48px;border-radius:12px;background:rgba(93,202,165,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.z-dot{width:8px;height:8px;border-radius:50%;background:var(--tlm);flex-shrink:0;}
+.z-text{flex:1;font-size:15px;color:rgba(255,255,255,.9);line-height:1.5;}
+.z-text strong{color:#fff;}
+.z-right{font-size:14px;color:var(--tlm);font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:6px;}
+
+/* FUNKCE */
+.funkce{padding:72px 48px;}
+.f-eye{font-size:12px;color:var(--teal);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px;}
+.f-title{font-size:28px;font-weight:700;color:var(--dark);margin-bottom:48px;}
+.f-item{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:40px 0;border-bottom:1px solid var(--border);}
+.f-item:last-child{border-bottom:none;}
+.f-item.rev .f-text{order:2;}.f-item.rev .f-vis{order:1;}
+.f-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.f-iw{width:38px;height:38px;border-radius:10px;background:var(--tl);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.f-t{font-size:16px;font-weight:700;color:var(--dark);}
+.f-s{font-size:14px;color:var(--gray);line-height:1.7;}
+.f-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:600;color:var(--teal);}
+.f-vis{background:var(--bg);border-radius:16px;height:200px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);}
+.f-vis span{font-size:12px;color:#C0C4CC;font-weight:500;}
+
+/* DŮVĚRA */
+.duvera{background:var(--dark);display:grid;grid-template-columns:repeat(5,1fr);}
+.d-item{padding:28px 20px;border-right:1px solid rgba(255,255,255,.08);text-align:center;}
+.d-item:last-child{border-right:none;}
+.d-num{font-size:24px;font-weight:700;color:var(--tlm);margin-bottom:5px;line-height:1.2;}
+.d-label{font-size:12px;color:rgba(255,255,255,.45);}
+
+/* CTA */
+.cta-section{background:var(--dark);padding:80px 48px;text-align:center;}
+.cta-eye{font-size:12px;color:var(--tlm);font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px;}
+.cta-title{font-size:36px;font-weight:700;color:#fff;line-height:1.2;max-width:580px;margin:0 auto 14px;}
+.cta-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.65;max-width:420px;margin:0 auto 32px;}
+.cta-ctas{display:flex;gap:12px;justify-content:center;}
+.cta-p{background:var(--teal);color:#fff;font-size:14px;font-weight:600;padding:13px 26px;border-radius:10px;}
+.cta-s{border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.8);font-size:14px;font-weight:600;padding:12px 24px;border-radius:10px;}
+.cta-note{font-size:12px;color:rgba(255,255,255,.25);margin-top:16px;}
+
+/* FOOTER */
+.footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.08);padding:24px 48px;display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{display:flex;align-items:center;gap:8px;}
+.footer-text{font-size:12px;color:rgba(255,255,255,.3);}
+</style>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon"><div class="lb lb1"></div><div class="lb lb2"></div><div class="lb lb3"></div><div class="ld"></div></div>
+    <div class="logo-text">enectiva <span>facility</span></div>
+  </div>
+  <div class="nav-links">
+    <div class="nav-link">Jak to funguje</div>
+    <div class="nav-link">Funkce</div>
+    <div class="nav-link">Ceny</div>
+    <div class="nav-link">O nás</div>
+  </div>
+  <div class="nav-cta">Chci vidět demo</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="h-eye">Digitální správa budov pro facility management</div>
+    <div class="h-title">Na každou revizi a termín můžete v klidu zapomenout.</div>
+    <div class="h-sub">Enectiva Facility hlídá provozní povinnosti vašich budov místo vás — online, odkudkoliv.</div>
+    <div class="ctas">
+      <div class="btn-s">Jak to funguje →</div>
+      <div class="btn-p">Chci vidět demo</div>
+    </div>
+  </div>
+  <div class="mockup">
+    <div class="mock-header"><div class="mock-title">Přehled povinností — všechny budovy</div><div class="mock-badge">Aktuální</div></div>
+    <div class="mock-rows">
+      <div class="mock-row"><div class="mock-rl">Elektrorevize</div><div class="mock-bw"><div class="mock-bar" style="width:90%"></div></div><div class="mock-val">za 12 dní</div></div>
+      <div class="mock-row"><div class="mock-rl">Kotelna</div><div class="mock-bw"><div class="mock-bar" style="width:60%"></div></div><div class="mock-val">za 28 dní</div></div>
+      <div class="mock-row"><div class="mock-rl">Výtah</div><div class="mock-bw"><div class="mock-bar" style="width:40%"></div></div><div class="mock-val">za 45 dní</div></div>
+      <div class="mock-row"><div class="mock-rl">Hasicí přístroje</div><div class="mock-bw"><div class="mock-bar" style="width:20%"></div></div><div class="mock-val">za 90 dní</div></div>
+    </div>
+    <div class="mock-chips"><div class="mock-chip">Revize</div><div class="mock-chip">Termíny</div><div class="mock-chip">Dokumenty</div></div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-item"><div class="trust-n">2012</div><div class="trust-l">Na trhu od</div></div>
+  <div class="trust-item"><div class="trust-n">7 let</div><div class="trust-l">Uchování dat</div></div>
+  <div class="trust-item"><div class="trust-n">ISO 27001</div><div class="trust-l">Certifikace</div></div>
+  <div class="trust-item"><div class="trust-n">CZ</div><div class="trust-l">Český software</div></div>
+</div>
+
+<!-- REALITA -->
+<div class="realita">
+  <div>
+    <div class="r-eye">Realita správy budov</div>
+    <div class="r-title">Poznáváte se v tom?</div>
+    <div class="items">
+      <div class="item-r"><div class="iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><line x1="1" y1="6" x2="17" y2="6" stroke="#1D9E8A" stroke-width="1.3"/><line x1="6" y1="6" x2="6" y2="17" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div><div class="it">Excel a tabulky</div><div class="is">Termíny revizí máte zapsané — ale nikdo vás neupozorní, když se blíží konec jejich platnosti.</div></div></div>
+      <div class="item-r"><div class="iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="3" width="16" height="12" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><polyline points="1,3 9,11 17,3" stroke="#1D9E8A" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div><div class="it">E-maily</div><div class="is">Domluvy s dodavateli a důležitá potvrzení jsou zapadlá v příchozí poště — když je potřebujete, musíte je složitě dohledávat.</div></div></div>
+      <div class="item-r"><div class="iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="3" width="16" height="14" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><line x1="5" y1="1" x2="5" y2="5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="13" y1="1" x2="13" y2="5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="1" y1="8" x2="17" y2="8" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div><div class="it">Kalendář</div><div class="is">Připomínku dostanete — ale kdo to má na starosti a kde najít příslušné podklady, to musíte zjistit sami.</div></div></div>
+      <div class="item-r"><div class="iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 6C2 5 2.9 4 4 4H7L9 6H14C15.1 6 16 6.9 16 8V14C16 15.1 15.1 16 14 16H4C2.9 16 2 15.1 2 14V6Z" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div><div class="it">Složky a šanony</div><div class="is">Dokumenty na různých místech — dohledání vám klidně zabere dvacet minut.</div></div></div>
+      <div class="item-r"><div class="iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C6.2 2 4 4.2 4 7C4 9 5.2 10.7 7 11.6V13H11V11.6C12.8 10.7 14 9 14 7C14 4.2 11.8 2 9 2Z" stroke="#1D9E8A" stroke-width="1.3" stroke-linejoin="round"/><line x1="7" y1="14.5" x2="11" y2="14.5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="8" y1="16.5" x2="10" y2="16.5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div class="it">Vlastní hlava</div><div class="is">Z práce odcházíte s tím, že jste snad na nic nezapomněli — ale jistý si nejste nikdy.</div></div></div>
+    </div>
+  </div>
+  <div class="visual" id="vis">
+    <svg class="svgl" id="svgl"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1,1 L7,4 L1,7" fill="none" stroke="#C8D9D6" stroke-width="1.2"/></marker></defs></svg>
+    <div class="ic c1" id="ic1"><div class="ic-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="16" height="16" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><line x1="1" y1="6" x2="17" y2="6" stroke="#1D9E8A" stroke-width="1.3"/><line x1="6" y1="6" x2="6" y2="17" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div class="ic-l">Excel</div></div>
+    <div class="ic c2" id="ic2"><div class="ic-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="3" width="16" height="12" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><polyline points="1,3 9,11 17,3" stroke="#1D9E8A" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div class="ic-l">E-maily</div></div>
+    <div class="ic c3" id="ic3"><div class="ic-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="3" width="16" height="14" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><line x1="5" y1="1" x2="5" y2="5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="13" y1="1" x2="13" y2="5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="1" y1="8" x2="17" y2="8" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div class="ic-l">Kalendář</div></div>
+    <div class="ic c4" id="ic4"><div class="ic-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 6C2 5 2.9 4 4 4H7L9 6H14C15.1 6 16 6.9 16 8V14C16 15.1 15.1 16 14 16H4C2.9 16 2 15.1 2 14V6Z" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div class="ic-l">Složky</div></div>
+    <div class="ic c5" id="ic5"><div class="ic-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C6.2 2 4 4.2 4 7C4 9 5.2 10.7 7 11.6V13H11V11.6C12.8 10.7 14 9 14 7C14 4.2 11.8 2 9 2Z" stroke="#1D9E8A" stroke-width="1.3" stroke-linejoin="round"/><line x1="7" y1="14.5" x2="11" y2="14.5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/></svg></div><div class="ic-l">Vaše hlava</div></div>
+    <div class="cdot" id="cdot"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><polyline points="5,13 10.5,18.5 21,8" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  </div>
+</div>
+
+<!-- STAV PO -->
+<div class="stavpo">
+  <div class="sp-eye">S Enectivou</div>
+  <div class="sp-title">Enectiva hlídá — vy řídíte.</div>
+  <div class="sp-grid">
+    <div class="sp-card"><div class="sp-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2z" stroke="#5DCAA5" stroke-width="1.5"/><path d="M10 6v4l3 3" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="sp-t">Včasná upozornění</div><div class="sp-sub">Už žádné nepříjemné překvapení.</div><div class="sp-s">Enectiva vás včas upozorní na každou revizi nebo kontrolu, takže máte vždy dostatek času vše připravit bez stresu.</div></div>
+    <div class="sp-card"><div class="sp-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 5C4 3.9 4.9 3 6 3H10L12 5H16C17.1 5 18 5.9 18 7V15C18 16.1 17.1 17 16 17H4C2.9 17 2 16.1 2 15V7C2 5.9 2.9 5 4 5Z" stroke="#5DCAA5" stroke-width="1.5"/><line x1="6" y1="10" x2="14" y2="10" stroke="#5DCAA5" stroke-width="1.3" stroke-linecap="round"/></svg></div><div class="sp-t">Klid při kontrolách</div><div class="sp-sub">Všechno máte okamžitě po ruce.</div><div class="sp-s">Smlouvy, revizní zprávy i technické podklady najdete během pár vteřin — díky 7leté archivaci máte vždy jistotu.</div></div>
+    <div class="sp-card"><div class="sp-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C6.7 2 4 4.7 4 8C4 10.3 5.3 12.2 7.2 13.2V15H12.8V13.2C14.7 12.2 16 10.3 16 8C16 4.7 13.3 2 10 2Z" stroke="#5DCAA5" stroke-width="1.5" stroke-linejoin="round"/><line x1="7.2" y1="16.5" x2="12.8" y2="16.5" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="sp-t">Méně stresu každý den</div><div class="sp-sub">Odcházíte z práce s čistou hlavou.</div><div class="sp-s">Máte jistotu, že jste na nic důležitého nezapomněli a všechny povinnosti jsou pod kontrolou.</div></div>
+    <div class="sp-card"><div class="sp-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8" cy="7" r="3.5" stroke="#5DCAA5" stroke-width="1.5"/><path d="M2 17C2 14.2 4.7 12 8 12" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/><path d="M13 13l2 2 4-4" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="sp-t">Snadné předání agendy</div><div class="sp-sub">Žádný chaos při změnách v týmu.</div><div class="sp-s">Když kolega odejde, nic se neztratí — jednoduše předáte přístup a práce pokračuje bez výpadků.</div></div>
+    <div class="sp-card"><div class="sp-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="14" rx="2" stroke="#5DCAA5" stroke-width="1.5"/><line x1="6" y1="2" x2="6" y2="6" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="2" x2="14" y2="6" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/><line x1="2" y1="9" x2="18" y2="9" stroke="#5DCAA5" stroke-width="1.5"/></svg></div><div class="sp-t">Plánování bez nejistoty</div><div class="sp-sub">Máte jasno v celém roce dopředu.</div><div class="sp-s">Naplánujete si všechny povinnosti a přesně víte, co, kde a kdy je potřeba udělat.</div></div>
+    <div class="sp-card"><div class="sp-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.4 7H18L13.5 10.5L15.3 16L10 12.5L4.7 16L6.5 10.5L2 7H7.6L10 2Z" stroke="#5DCAA5" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="sp-t">Důvěra ve vlastní práci</div><div class="sp-sub">Žádné trapné vysvětlování.</div><div class="sp-s">Díky systému máte kontrolu nad detaily a předcházíte chybám dřív, než nastanou.</div></div>
+  </div>
+</div>
+
+<!-- JAK FUNGUJE -->
+<div class="jakfunguje">
+  <div class="jf-mock"><span>Screenshot</span></div>
+  <div>
+    <div class="jf-eye">Jak to funguje</div>
+    <div class="jf-title">Tři kroky k vašemu klidu.</div>
+    <div class="jf-steps">
+      <div class="jf-step"><div class="jf-num">1</div><div><div class="jf-t">Vytvoříte si přehled všech objektů</div><div class="jf-s">Během pár kliků si nastavíte celé vaše portfolio ve stromu entit, takže máte veškeré budovy a zařízení přehledně na jednom místě.</div></div></div>
+      <div class="jf-step"><div class="jf-num">2</div><div><div class="jf-t">Přiřadíte povinnosti a dokumentaci</div><div class="jf-s">Ke každému objektu přiřadíte revize, termíny i veškeré dokumenty — kdykoliv pak přesně víte, co se má kdy vyřešit a kde to najít.</div></div></div>
+      <div class="jf-step"><div class="jf-num">3</div><div><div class="jf-t">Systém hlídá termíny za vás</div><div class="jf-s">Enectiva Facility automaticky sleduje všechny důležité události a včas vás upozorní, takže máte povinnosti pod kontrolou bez neustálého hlídání.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ZÁKON BANNER -->
+<div class="zakon">
+  <div class="z-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 2H18C19.1 2 20 2.9 20 4V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V4C4 2.9 4.9 2 6 2Z" stroke="#5DCAA5" stroke-width="1.5"/><line x1="8" y1="7" x2="16" y2="7" stroke="#5DCAA5" stroke-width="1.3" stroke-linecap="round"/><line x1="8" y1="11" x2="16" y2="11" stroke="#5DCAA5" stroke-width="1.3" stroke-linecap="round"/><line x1="8" y1="15" x2="12" y2="15" stroke="#5DCAA5" stroke-width="1.3" stroke-linecap="round"/><path d="M14 17l1.5 1.5 3-3" stroke="#5DCAA5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="z-dot"></div>
+  <div class="z-text"><strong>Zákon 250/2021 Sb.</strong> ukládá povinnost vést kompletní dokumentaci ke každému zařízení — a prokázat ji při kontrole.</div>
+  <div class="z-right">Enectiva vás připraví <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div>
+
+<!-- FUNKCE -->
+<div class="funkce">
+  <div class="f-eye">Funkce</div>
+  <div class="f-title">S čím vám Enectiva Facility pomůže.</div>
+  <div class="f-item">
+    <div class="f-text"><div class="f-head"><div class="f-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="3" width="16" height="13" rx="2" stroke="#1D9E8A" stroke-width="1.3"/><line x1="5" y1="1" x2="5" y2="5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="13" y1="1" x2="13" y2="5" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><line x1="1" y1="8" x2="17" y2="8" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div class="f-t">Kalendář termínů</div></div><div class="f-s">Přehledná časová osa všech povinností s možností propojení na Google Calendar nebo MS Outlook.</div></div>
+    <div class="f-vis"><span>Screenshot</span></div>
+  </div>
+  <div class="f-item rev">
+    <div class="f-text"><div class="f-head"><div class="f-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 6C3 4.9 3.9 4 5 4H8L10 6H15C16.1 6 17 6.9 17 8V14C17 15.1 16.1 16 15 16H3C1.9 16 1 15.1 1 14V8C1 6.9 1.9 6 3 6Z" stroke="#1D9E8A" stroke-width="1.3"/></svg></div><div class="f-t">Správa dokumentů</div></div><div class="f-s">Bezpečné uložení veškerých podkladů a dokumentů na jednom místě s archivací až 7 let.</div></div>
+    <div class="f-vis"><span>Screenshot</span></div>
+  </div>
+  <div class="f-item">
+    <div class="f-text"><div class="f-head"><div class="f-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="7" cy="6" r="3" stroke="#1D9E8A" stroke-width="1.3"/><path d="M1 16C1 13.2 3.7 11 7 11" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><path d="M12 11l2 2 4-4" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="f-t">Role a oprávnění</div></div><div class="f-s">Každý uživatel má přístup jen k datům, která potřebuje pro svou práci.</div></div>
+    <div class="f-vis"><span>Screenshot</span></div>
+  </div>
+  <div class="f-item rev">
+    <div class="f-text"><div class="f-head"><div class="f-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="5" cy="6" r="2.5" stroke="#1D9E8A" stroke-width="1.3"/><circle cx="13" cy="6" r="2.5" stroke="#1D9E8A" stroke-width="1.3"/><path d="M1 15C1 12.8 3.2 11 5 11" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/><path d="M17 15C17 12.8 14.8 11 13 11" stroke="#1D9E8A" stroke-width="1.3" stroke-linecap="round"/></svg></div><div class="f-t">Sdílení s dodavateli</div></div><div class="f-s">Dodavatelé mohou samostatně nahrávat a spravovat informace k přiřazeným objektům.</div></div>
+    <div class="f-vis"><span>Screenshot</span></div>
+  </div>
+  <div class="f-item">
+    <div class="f-text"><div class="f-head"><div class="f-iw"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1L11 6.5H17L12.5 9.5L14 15.5L9 12L4 15.5L5.5 9.5L1 6.5H7L9 1Z" stroke="#1D9E8A" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div class="f-t">Integrace s energetickým managementem</div></div><div class="f-s">Propojení s Enectiva energetickým managementem bez nutnosti přepínání mezi systémy.</div><div class="f-link">Zjistit více <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="#1D9E8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+    <div class="f-vis"><span>Screenshot</span></div>
+  </div>
+</div>
+
+<!-- DŮVĚRA -->
+<div class="duvera">
+  <div class="d-item"><div class="d-num">2012</div><div class="d-label">Na trhu od</div></div>
+  <div class="d-item"><div class="d-num">7 let</div><div class="d-label">Archivace dat</div></div>
+  <div class="d-item"><div class="d-num">ISO<br>27001</div><div class="d-label">Certifikace</div></div>
+  <div class="d-item"><div class="d-num">TIER III</div><div class="d-label">Datové centrum</div></div>
+  <div class="d-item"><div class="d-num">CZ</div><div class="d-label">Český software</div></div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-eye">Začněte ještě dnes</div>
+  <div class="cta-title">Mějte konečně přehled o všem co vaše budovy vyžadují.</div>
+  <div class="cta-sub">Nechte systém hlídat povinnosti za vás — a jděte domů s klidem v hlavě.</div>
+  <div class="cta-ctas">
+    <div class="cta-p">Chci vidět demo</div>
+    <div class="cta-s">Nezávazná konzultace</div>
+  </div>
+  <div class="cta-note">Bez závazku. Odpovíme do 24 hodin.</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">
+    <div class="logo-icon"><div class="lb lb1"></div><div class="lb lb2"></div><div class="lb lb3"></div><div class="ld"></div></div>
+    <div class="logo-text" style="color:#fff;opacity:.6;">enectiva <span style="color:var(--tlm)">facility</span></div>
+  </div>
+  <div class="footer-text">© 2025 Enerfis s.r.o. · Drtinova 557/10, Praha 5 · enectiva.cz</div>
+</div>
+
+<script>
+function drawLines() {
+  const svg = document.getElementById('svgl');
+  const vis = document.getElementById('vis');
+  const cdot = document.getElementById('cdot');
+  if (!vis || !svg || !cdot) return;
+  const vr = vis.getBoundingClientRect();
+  const dr = cdot.getBoundingClientRect();
+  const tx = dr.left - vr.left + dr.width / 2;
+  const ty = dr.top - vr.top + dr.height / 2;
+  svg.querySelectorAll('line.conn').forEach(l => l.remove());
+  ['ic1','ic2','ic3','ic4','ic5'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const er = el.getBoundingClientRect();
+    const ex = er.left - vr.left + er.width / 2;
+    const ey = er.top - vr.top + er.height / 2;
+    const l = document.createElementNS('http://www.w3.org/2000/svg','line');
+    l.setAttribute('class','conn');
+    l.setAttribute('x1', ex); l.setAttribute('y1', ey);
+    l.setAttribute('x2', tx); l.setAttribute('y2', ty);
+    l.setAttribute('stroke','#C8D9D6');
+    l.setAttribute('stroke-width','1');
+    l.setAttribute('stroke-dasharray','5 4');
+    l.setAttribute('marker-end','url(#arr)');
+    svg.appendChild(l);
+  });
+}
+setTimeout(drawLines, 300);
+window.addEventListener('resize', drawLines);
+</script>
