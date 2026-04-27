@@ -6,7 +6,9 @@
 <title>Enectiva Facility</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-padding-top:80px;scroll-behavior:smooth;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#0F1F2E;zoom:1.25;}
+@media(max-width:768px){body{zoom:1;}}
 :root{
   --teal:#1D9E8A;--tlm:#5DCAA5;--tl:#E8F7F4;
   --lime:#8DC63F;--dark:#0F1F2E;--navy:#141F2E;
@@ -359,9 +361,149 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .md-b2:hover{border-color:var(--dark);}
 .md-hide{display:none!important;}
 
+/* ─── TOP NAVIGATION ─── */
+.topnav{position:sticky;top:0;left:0;right:0;z-index:90;background:#fff;border-bottom:1px solid var(--border);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;}
+.tn-row{display:flex;align-items:center;height:62px;padding:0 28px;gap:32px;max-width:1280px;margin:0 auto;}
+.tn-brand{display:flex;align-items:center;gap:7px;flex-shrink:0;cursor:pointer;text-decoration:none;}
+.tn-bl{display:flex;align-items:flex-end;gap:2px;height:18px;}
+.tn-b1,.tn-b2,.tn-b3{width:3.5px;border-radius:1px;background:var(--teal);}
+.tn-b1{height:9px;}.tn-b2{height:16px;}.tn-b3{height:7px;}
+.tn-bd{width:5px;height:5px;background:var(--lime);transform:rotate(45deg);margin-left:1px;margin-bottom:1px;}
+.tn-bt{font-size:18px;font-weight:700;color:var(--dark);letter-spacing:-.005em;}
+.tn-links{display:flex;gap:2px;flex:1;}
+.tn-lk{font-size:14px;color:var(--dark);font-weight:500;padding:8px 14px;cursor:pointer;text-decoration:none;transition:color .15s ease;}
+.tn-lk:hover{color:var(--teal);}
+.tn-right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+.tn-login{font-size:13px;font-weight:600;color:var(--gray);cursor:pointer;text-decoration:none;transition:color .15s ease;}
+.tn-login:hover{color:var(--dark);}
+.tn-cta{background:var(--teal);color:#fff;font-size:13px;font-weight:700;padding:11px 20px;border:none;cursor:pointer;font-family:inherit;transition:background .18s ease;}
+.tn-cta:hover{background:#158A78;}
+.tn-burger{display:none;flex-direction:column;justify-content:center;gap:4px;background:none;border:none;cursor:pointer;padding:8px;width:38px;height:38px;}
+.tn-burger span{width:22px;height:2px;background:var(--dark);transition:transform .22s ease,opacity .22s ease;}
+.topnav.tn-open .tn-burger span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.topnav.tn-open .tn-burger span:nth-child(2){opacity:0;}
+.topnav.tn-open .tn-burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.tn-mobile{display:none;}
+@media(max-width:768px){
+  .tn-row{padding:0 20px;gap:0;height:56px;}
+  .tn-links{display:none;}
+  .tn-right .tn-login{display:none;}
+  .tn-right{margin-left:auto;gap:8px;}
+  .tn-cta{font-size:12px;padding:9px 16px;}
+  .tn-burger{display:flex;margin-left:8px;}
+  .tn-mobile{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--border);padding:8px 20px 16px;}
+  .topnav.tn-open .tn-mobile{display:flex;}
+  .tn-mobile a{font-size:15px;color:var(--dark);font-weight:500;padding:12px 0;border-bottom:1px solid #F3F4F6;text-decoration:none;}
+  .tn-mobile a:last-child{border-bottom:none;}
+}
+
+/* ═══ COMPREHENSIVE MOBILE OPTIMIZATION ═══ */
+@media(max-width:768px){
+  /* HERO */
+  .hero{padding:36px 20px 0;}
+  .h-title{font-size:30px;line-height:1.2;margin-bottom:14px;}
+  .h-sub{font-size:15px;margin-bottom:24px;}
+  .h-eye{font-size:10px;margin-bottom:14px;}
+  .hero .btn-row{flex-direction:column;gap:10px;align-items:stretch;}
+  .hero .btn-p,.hero .btn-s{width:100%;justify-content:center;}
+
+  /* TRUST STRIP — flow as wraps if used */
+  .trust-strip{flex-wrap:wrap;justify-content:center;gap:14px;padding:24px 20px;}
+  .trust-strip .ts-item{font-size:11.5px;}
+
+  /* REALITA / S ENECTIVOU sekce */
+  .real-sec,.s-en-sec{padding:48px 20px;}
+  .real-sec .sec-title,.s-en-sec .sec-title{font-size:24px;line-height:1.25;}
+  .real-sec .sec-grid,.s-en-sec .sec-grid{grid-template-columns:1fr!important;gap:14px;}
+
+  /* JAK TO FUNGUJE */
+  .jak-sec{padding:56px 20px;}
+  .jak-sec .sec-title{font-size:24px;line-height:1.25;margin-bottom:24px;}
+  .jak-tabs{flex-direction:column;gap:6px;}
+  .jak-tab{width:100%;text-align:left;}
+  .jak-body.act{padding:20px;}
+  .jak-body .jb-grid{grid-template-columns:1fr!important;gap:18px;}
+  .jak-body h3{font-size:18px;}
+
+  /* ZAKON banner */
+  .zakon-sec{padding:36px 20px;}
+  .zakon-sec .z-title{font-size:22px;line-height:1.3;}
+  .zakon-sec .z-row{flex-direction:column;gap:12px;align-items:stretch;}
+  .zakon-sec .z-btn,.zakon-sec .z-link{width:100%;justify-content:center;}
+
+  /* FUNKCE */
+  .funkce-sec{padding:56px 16px;}
+  .funkce-sec .sec-title{font-size:24px;line-height:1.25;margin-bottom:24px;}
+  .funkce-sec .tab-nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;max-width:100%;border-left:none;border-right:none;}
+  .funkce-sec .tab-nav-item{padding:10px 12px;flex-shrink:0;}
+  .funkce-sec .tn-label{font-size:11px;}
+  .funkce-sec .f-t{font-size:16px;}
+  .funkce-sec .f-s{font-size:13px;}
+
+  /* REFERENCE — logo wall */
+  .ref-sec{padding:48px 20px;}
+  .ref-title{font-size:22px;line-height:1.3;}
+  .ref-sub{font-size:13px;margin-bottom:24px;}
+  .ref-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px;}
+  .ref-logo{height:38px;font-size:9px;}
+
+  /* CTA-FINAL */
+  .cta-final{padding:56px 20px;}
+  .cta-h{font-size:28px;line-height:1.2;}
+  .cta-s{font-size:14px;margin-bottom:24px;}
+  .cta-btn{width:100%;justify-content:center;font-size:14px;padding:14px 24px;}
+  .cta-checks{gap:18px;}
+  .cta-ck{font-size:11px;}
+
+  /* MODAL */
+  .md{max-width:none;width:calc(100% - 16px);}
+  .md-tt{font-size:15px;}
+  .md-ss{font-size:12.5px;}
+  .md-acts{flex-direction:column;}
+  .md-b1,.md-b2{width:100%;}
+}
+
+/* extra-small phones */
+@media(max-width:380px){
+  .h-title{font-size:26px;}
+  .cta-h{font-size:24px;}
+  .real-sec .sec-title,.s-en-sec .sec-title,.jak-sec .sec-title,.funkce-sec .sec-title,.ref-title{font-size:21px;}
+}
+
 </style>
 </head>
 <body>
+
+<!-- ═══ TOP NAV ═══ -->
+<nav class="topnav" id="topnav">
+  <div class="tn-row">
+    <a href="#" class="tn-brand" aria-label="Enectiva Facility — domů">
+      <div class="tn-bl"><div class="tn-b1"></div><div class="tn-b2"></div><div class="tn-b3"></div></div>
+      <div class="tn-bd"></div>
+      <span class="tn-bt">facility</span>
+    </a>
+    <div class="tn-links">
+      <a href="#funkce" class="tn-lk">Funkce</a>
+      <a href="ceny.html" class="tn-lk">Ceny</a>
+      <a href="jak-to-funguje.html" class="tn-lk">Jak to funguje</a>
+      <a href="#reference" class="tn-lk">Reference</a>
+    </div>
+    <div class="tn-right">
+      <a href="#prihlasit" class="tn-login">Přihlásit</a>
+      <button class="tn-cta" onclick="openDemoModal()">Vyzkoušet demo</button>
+      <button class="tn-burger" aria-label="Menu" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="tn-mobile">
+    <a href="#funkce" onclick="toggleNav()">Funkce</a>
+    <a href="ceny.html">Ceny</a>
+    <a href="jak-to-funguje.html">Jak to funguje</a>
+    <a href="#reference" onclick="toggleNav()">Reference</a>
+    <a href="#prihlasit" onclick="toggleNav()">Přihlásit</a>
+  </div>
+</nav>
 
 <!-- ═══ HERO ═══ -->
 <div class="hero">
@@ -504,7 +646,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 
 
 <!-- ═══ FUNKCE ═══ -->
-<div class="funkce-sec">
+<div class="funkce-sec" id="funkce">
 <div class="sec-eye">FUNKCE ENECTIVA FACILITY</div>
 <div class="sec-title">S čím vám Enectiva Facility pomůže.</div>
 
@@ -561,7 +703,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 </div>
 
 <!-- ═══ REFERENCE (LOGO WALL) ═══ -->
-<div class="ref-sec">
+<div class="ref-sec" id="reference">
   <div class="ref-eye">Reference</div>
   <div class="ref-title">Od výrobních hal po kanceláře — <span>Enectivě věří desítky firem</span> napříč ČR.</div>
   <div class="ref-sub">Společnosti, které nenechávají své povinnosti na paměti ani na Excelu.</div>
@@ -632,6 +774,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 </div>
 
 <script>
+// ── TOP NAV — mobile toggle ──
+function toggleNav(){document.getElementById('topnav').classList.toggle('tn-open');}
+
 // ── HERO CALENDAR ──
 const evData={
   "2026-04-02":[{t:"Revize el. rozvodů",c:"g"}],
